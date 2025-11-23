@@ -1,0 +1,96 @@
+/* 🌌 Fondo morado degradado */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fc1afc, hsl(298, 80%, 40%), #d8b6ff);
+    background-size: 300% 300%;
+    animation: bgMove 10s infinite alternate;
+    overflow-x: hidden;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* 💌 Contenedor */
+.container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* ✨ Texto */
+.subtitle {
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    text-shadow: 0 0 10px #ffffffaa;
+}
+
+/* 📄 Carta abierta */
+.papel3d {
+    width: 200%;        /* ← ancho principal */
+    max-width: 400px;  /* ← límite máximo */
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: 0.6s ease;
+    opacity: 0;
+}
+
+.papel3d.visible {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* ✍️ Mensaje con letra Bradley Hand ITC */
+#papelMsg {
+    font-family: "Bradley Hand ITC", cursive;
+    font-size: 20px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* ❌ Botón cerrar */
+.close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e32afc93;
+    color: white;
+    font-size: 32px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 18px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+
+.close-btn.visible {
+    display: block;
+}
+
+/* ❤️‍🩹 Corazones vendados */
+.corazon {
+    position: fixed;
+    font-size: 30px;
+    animation: flotar 4s linear;
+    pointer-events: none;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-250px) scale(1.6); opacity: 0; }
+}
+
+/* 🌫 Fondo oscuro */
+.bg-fade-dark {
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.5);
+}
